@@ -42,7 +42,7 @@ Follow the below steps to install the NFD or any other operator in general
  5. Click **Install** to bring up the Install Operator Screen 
  6. Leave all the values at default and click **Install**
 
-[![https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NFDOut.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NFDOut.gif)
+![Install Node Feature Discovery Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NFDOut.gif)
 
 #### Red Hat OpenShift Serverless, ServiceMesh, and Authorino Operator
 To enable the KServe component used by the single-model serving platform for large models, we need to install the Red Hat OpenShift Serverless and Red Hat OpenShift Service Mesh Operators.
@@ -62,12 +62,13 @@ Follow the below steps to install the all the above operator
  6. Leave all the values at default and click **Install**
 
 Red Hat OpenShift Serverless
-[![Serverless](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServerlessOut.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServerlessOut.gif)
+![Install Serverless Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServerlessOut.gif)
 
 Red Hat OpenShift ServiceMesh
-[![Service Mesh](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServiceMeshOut.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServiceMeshOut.gif)
+![Install Service Mesh Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServiceMeshOut.gif)
 
-[![Authorino](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/AuthorinoOut.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/AuthorinoOut.gif)
+Red Hat Authorino 
+![Install Authorino Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/AuthorinoOut.gif)
 
 #### Nvidia GPU Operator
 The NVIDIA GPU Operator automates the management of NVIDIA GPUs on Kubernetes clusters, handling provisioning, configuration, and monitoring. It supports NVIDIA GPUDirect for direct GPU communication, enhancing performance, and simplifying GPU management in Kubernetes environments.
@@ -81,7 +82,7 @@ Follow the below steps to install the Nvidia GPU operator
  5. Click **Install** to bring up the Install Operator Screen 
  6. Leave all the values at default and Click **Install**
 
-[![NVIDIA](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaGPUOperatorOut.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaGPUOperatorOut.gif)
+![Install NVIDIA GPU Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaGPUOperatorOut.gif)
 
 Once the NVIDIA GPU Operator is installed we will need to create an instance of the ClusterPolicy, follow the steps below to configure the Nvidia GPU Operator
 
@@ -91,14 +92,13 @@ Once the NVIDIA GPU Operator is installed we will need to create an instance of 
  4. Next check the NVIDIA GPU operator installation progress by looking at the  pods running as shown in the screenshot  
  5. It should take about 15-20 minutes, depending on the number of worker nodes
 
-[![NVIDIA](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut01.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut01.gif)
+![Create GPU Cluster Policy](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut01.gif)
 
 
  6. Once all the Pods are up and running navigate to the **nvidia-driver-deamonset-. . . . .** (This pod is available for each worker node)
  7. Go to the terminal for the pod and run the **nvidia-smi** command to display the details about the GPUs available on that node as shown in the screenshot. The NVIDIA System Management Interface (nvidia-smi) is a command-line utility that monitors and manages NVIDIA GPU devices.
 
-[![NVIDIA](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut02.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut02.gif)
-
+![NVIDIA SMI](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut02.gif)
 
 #### Red Hat OpenShift AI Operator
 Red Hat OpenShift AI is a scalable MLOps platform that supports the full AI/ML lifecycle, enabling teams to build, deploy, and manage AI applications both on-premises and in the cloud. Previously known as OpenShift Data Science, it leverages open-source technologies for innovation and consistency. Installation is now possible.
@@ -112,7 +112,7 @@ Follow the below steps to install the Nvidia GPU operator
  5. Click **Install** to bring up the Install Operator Screen 
  6. Leave all the values at default and Click **Install**
 
-[![RHOAI](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAIOperatorOut01.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAIOperatorOut01.gif)
+![Install RHOAI Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAIOperatorOut01.gif)
 
 Next, we will configure the Red Hat OpenShift AI Operator using the following steps:
 
@@ -124,8 +124,8 @@ Next, we will configure the Red Hat OpenShift AI Operator using the following st
  6. You can also see the status of other components under the DSC Initialization and the Feature Tracker tabs
  8. At this point, please wait for the DataScience Cluster to be provisioned
 
-[![RHOAI](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAIOperatorOut03.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAIOperatorOut03.gif)
- 
+![DataScience Cluster Progress](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAIOperatorOut03.gif)
+
 Once the Data Science Cluster is successfully installed:
 
  1. A new menu item **Red Hat OpenShift AI** is available under the squares Icon on the top right, as shown in the screenshot below.
@@ -135,8 +135,7 @@ Once the Data Science Cluster is successfully installed:
 
 You have successfully installed Red Hat OpenShift AI
 
-[![RHOAI](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAILoginOut.gif)](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAILoginOut.gif)
-
+![RHOAI Login](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAILoginOut.gif)
 
 ## **Conclusion**
 
