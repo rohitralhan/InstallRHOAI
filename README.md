@@ -87,7 +87,7 @@ Follow the below steps to install the Nvidia GPU operator
 
 ![Install NVIDIA GPU Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaGPUOperatorOut.gif)
 
-Once the NVIDIA GPU Operator is installed we will need to create an instance of the ClusterPolicy, follow the steps below to configure the Nvidia GPU Operator
+Once the NVIDIA GPU Operator is installed we will create an instance of the ClusterPolicy, follow the steps below to configure the Nvidia GPU Operator
 
  1. Once the operator installation is complete click on **View Operator** or Navigate to **Operators --> Installed Operators --> NVIDIA GPU Operator**
  2. Under the **Cluster Policy** card click **Create Instance** 
