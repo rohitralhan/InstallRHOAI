@@ -41,7 +41,7 @@ Follow the below steps to install the NFD or any other operator in general
  4. Select the one provided by **Red Hat** as shown in the screenshot below 
  5. Click **Install** to bring up the Install Operator Screen 
  6. Leave all the values at default and click **Install**. Once the install completes, click **View Operator**
- 7. Under the NodeFeatureDiscovery component, click **Create instance**. Leave all the values at default and click **Create**
+ 7. Under the NodeFeatureDiscovery tab, click **Create instance**. Leave all the values at default and click **Create**
 
 ![Install Node Feature Discovery Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NFDOut1.gif)
 
