@@ -18,7 +18,7 @@ We will look at installing Red Hat OpenShift AI
 	 - Red Hat Authorino Operator
 	 - Red Hat OpenShift AI Operator
  - Validate the installation
-	 - Validate the installation 
+	 - Login to Red Hat OpenShift AI 
 
 ## Prerequisite
  - Access to Red Hat OpenShift Cluster with GPUs available
