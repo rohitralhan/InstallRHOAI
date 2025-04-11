@@ -40,7 +40,8 @@ Follow the below steps to install the NFD or any other operator in general
  3. In the search box, type **Node Feature** 
  4. Select the one provided by **Red Hat** as shown in the screenshot below 
  5. Click **Install** to bring up the Install Operator Screen 
- 6. Leave all the values at default and click **Install**
+ 6. Leave all the values at default and click **Install**. Once the install completes, click **View Operator**
+ 7. Under the NodeFeatureDiscovery component, click **Create instance**. Leave all the values at default and click **Create**
 
 ![Install Node Feature Discovery Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NFDOut.gif)
 
@@ -50,7 +51,7 @@ To enable the KServe component used by the single-model serving platform for lar
 -   **KServe**: A Kubernetes CRD for model orchestration, runtime management, deployment lifecycle, storage access, and networking.
 -   **Red Hat OpenShift Serverless**: Enables serverless model deployments using Knative.
 -   **Red Hat OpenShift Service Mesh**: Manages traffic flows and access policies with Istio. 
-- **Authorino**: To integrate an authorization provider with the single-model serving platform, we need to install the 'Red Hat - Authorino' Operator.
+-   **Authorino**: To integrate an authorization provider with the single-model serving platform, we need to install the 'Red Hat - Authorino' Operator.
 
 Follow the below steps to install the all the above operator
 
@@ -61,10 +62,12 @@ Follow the below steps to install the all the above operator
  5. Click **Install** to bring up the Install Operator Screen 
  6. Leave all the values at default and click **Install**
 
+For the OpenShift Service Mesh and OpenShift Serverless we only need to install the operators, the ServiceMeshControlPlane or KNativeServing resource on your OpenShift cluster will be installed by the Red Hat OpenShift AI Operator automatically once we install it and create the DataScience instance as mentioned in the later section.
+
 Red Hat OpenShift Serverless
 ![Install Serverless Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServerlessOut.gif)
 
-Red Hat OpenShift ServiceMesh
+Red Hat OpenShift ServiceMesh 2 (Currently only Service Mesh v2 is supported)
 ![Install Service Mesh Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServiceMeshOut.gif)
 
 Red Hat Authorino 
