@@ -43,7 +43,7 @@ Follow the below steps to install the NFD or any other operator in general
  6. Leave all the values at default and click **Install**. Once the install completes, click **View Operator**
  7. Under the NodeFeatureDiscovery component, click **Create instance**. Leave all the values at default and click **Create**
 
-![Install Node Feature Discovery Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NFDOut.gif)
+![Install Node Feature Discovery Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NFDOut1.gif)
 
 #### Red Hat OpenShift Serverless, ServiceMesh, and Authorino Operator
 To enable the KServe component used by the single-model serving platform for large models, we need to install the Red Hat OpenShift Serverless and Red Hat OpenShift Service Mesh Operators.
