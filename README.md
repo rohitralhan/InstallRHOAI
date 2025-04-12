@@ -90,9 +90,9 @@ Follow the below steps to install the Nvidia GPU operator
 Once the NVIDIA GPU Operator is installed we will create an instance of the ClusterPolicy, follow the steps below to configure the Nvidia GPU Operator
 
  1. Once the operator installation is complete click on **View Operator** or Navigate to **Operators --> Installed Operators --> NVIDIA GPU Operator**
- 2. Under the **Cluster Policy** card click **Create Instance** 
+ 2. Under the **ClusterPolicy** card click **Create Instance** 
  3. In the **Create Instance** screen accept the defaults and click **Create** 
- 4. Next check the NVIDIA GPU operator installation progress by looking at the  pods running as shown in the screenshot  
+ 4. Next check the NVIDIA GPU operator installation progress by looking at the pods running as shown in the screenshot. Number of pods may vary based on the nodes in the cluster.  
  5. It should take about 15-20 minutes, depending on the number of worker nodes
 
 ![Create GPU Cluster Policy](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut01.gif)
@@ -110,10 +110,11 @@ Follow the below steps to install the Nvidia GPU operator
 
  1. Login to **Red Hat OpenShift web console**
  2. Navigate to **Operators --> Operator Hub**
- 3. In the search box type Red Hat OpenShift AI 
- 4. Select the one provided by **Red Hat** as shown in the screenshots below 
- 5. Click **Install** to bring up the Install Operator Screen 
- 6. Leave all the values at default and Click **Install**
+ 3. Select the project where you want to install the Red Hat OpenShift AI Operator
+ 4. In the search box type **Red Hat OpenShift AI** 
+ 5. Select the one provided by **Red Hat** as shown in the screenshots below 
+ 6. Click **Install** to bring up the Install Operator Screen 
+ 7. Leave all the values at default and Click **Install**
 
 ![Install RHOAI Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAIOperatorOut01.gif)
 
@@ -121,7 +122,7 @@ Next, we will configure the Red Hat OpenShift AI Operator using the following st
 
  1. Navigate to **Operators --> Installed Operators**
  2. Click **Red Hat OpenShift AI Operator**
- 3. On the Details Page that Opens up click on **Create Instance** 
+ 3. On the Details Page that Opens up, in the **Data Science Cluster** card click on **Create Instance** 
  4. Use the default values and click **Create**
  5. Navigate to the **Data Science Cluster** tab to monitor the progress of the cluster under the Status column
  6. You can also see the status of other components under the DSC Initialization and the Feature Tracker tabs
