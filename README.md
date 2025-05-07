@@ -33,9 +33,9 @@ In this section, we will install the various Red Hat OpenShift Operators to set 
 #### Node Feature Discovery Operator
 The Node Feature Discovery (NFD) Operator automates feature discovery and labeling for OpenShift cluster nodes. It runs on and scans each node's hardware and software configurations, adding labels for features like the NVIDIA GPU PCIe vendor ID. These labels optimize resource allocation and help identify suitable nodes for specific workloads, enhancing cluster performance.
 
-Follow the below steps to install the NFD or any other operator in general
+Follow the steps below to install the NFD or any other operator in general
 
- 1. Login to **Red Hat OpenShift web console**
+ 1. Log in to the **Red Hat OpenShift web console**
  2. Navigate to **Operators --> Operator Hub**
  3. In the search box, type **Node Feature** 
  4. Select the one provided by **Red Hat** as shown in the screenshot below 
@@ -53,16 +53,16 @@ To enable the KServe component used by the single-model serving platform for lar
 -   **Red Hat OpenShift Service Mesh**: Manages traffic flows and access policies with Istio. 
 -   **Authorino**: To integrate an authorization provider with the single-model serving platform, we need to install the 'Red Hat - Authorino' Operator.
 
-Follow the below steps to install the all the above operator
+Follow the steps below to install all the above operators
 
- 1. Login to **Red Hat OpenShift web console**
+ 1. Log in to the **Red Hat OpenShift web console**
  2. Navigate to **Operators --> Operator Hub**
  3. In the search box, type the name of the corresponding operator 
- 4. Select the one provided by **Red Hat** as shown in the screenshots below 
+ 4. Select the one provided by **Red Hat**, as shown in the screenshots below 
  5. Click **Install** to bring up the Install Operator Screen 
  6. Leave all the values at default and click **Install**
 
-For the OpenShift Service Mesh and OpenShift Serverless we only need to install the operators, the ServiceMeshControlPlane or KNativeServing resource on your OpenShift cluster will be installed by the Red Hat OpenShift AI Operator automatically once we install it and create the DataScience instance as mentioned in the later section.
+For the OpenShift Service Mesh and OpenShift Serverless, we only need to install the operators, the ServiceMeshControlPlane or KNativeServing resource on your OpenShift cluster will be installed by the Red Hat OpenShift AI Operator automatically once we install it and create the DataScience instance as mentioned in the later section.
 
 Red Hat OpenShift Serverless
 ![Install Serverless Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/ServerlessOut.gif)
@@ -74,47 +74,47 @@ Red Hat Authorino
 ![Install Authorino Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/AuthorinoOut.gif)
 
 #### Nvidia GPU Operator
-The NVIDIA GPU Operator automates the management of NVIDIA GPUs on Kubernetes clusters, handling provisioning, configuration, and monitoring. It supports NVIDIA GPUDirect for direct GPU communication, enhancing performance, and simplifying GPU management in Kubernetes environments.
+The NVIDIA GPU Operator automates the management of NVIDIA GPUs on Kubernetes clusters, handling provisioning, configuration, and monitoring. It supports NVIDIA GPUDirect for direct GPU communication, enhancing performance and simplifying GPU management in Kubernetes environments.
 
-Follow the below steps to install the Nvidia GPU operator
+Follow the steps below to install the Nvidia GPU operator
 
- 1. Login to **Red Hat OpenShift web console**
+ 1. Log in to the **Red Hat OpenShift web console**
  2. Navigate to **Operators --> Operator Hub**
  3. In the search box type type Nvidia 
- 4. Select the one provided by **Red Hat** as shown in the screenshots below 
+ 4. Select the one provided by **Red Hat**, as shown in the screenshots below 
  5. Click **Install** to bring up the Install Operator Screen 
- 6. Leave all the values at default and Click **Install**
+ 6. Leave all the values at default and click **Install**
 
 ![Install NVIDIA GPU Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaGPUOperatorOut.gif)
 
-Once the NVIDIA GPU Operator is installed we will create an instance of the ClusterPolicy, follow the steps below to configure the Nvidia GPU Operator
+Once the NVIDIA GPU Operator is installed, we will create an instance of the ClusterPolicy and follow the steps below to configure the Nvidia GPU Operator
 
- 1. Once the operator installation is complete click on **View Operator** or Navigate to **Operators --> Installed Operators --> NVIDIA GPU Operator**
- 2. Under the **ClusterPolicy** card click **Create Instance** 
- 3. In the **Create Instance** screen accept the defaults and click **Create** 
- 4. Next check the NVIDIA GPU operator installation progress by looking at the pods running as shown in the screenshot. Number of pods may vary based on the nodes in the cluster.  
+ 1. Once the operator installation is complete, click on **View Operator** or Navigate to **Operators --> Installed Operators --> NVIDIA GPU Operator**
+ 2. Under the **ClusterPolicy** card, click **Create Instance** 
+ 3. In the **Create Instance** screen, accept the defaults and click **Create** 
+ 4. Next, check the NVIDIA GPU operator installation progress by looking at the pods running as shown in the screenshot. The number of pods may vary based on the nodes in the cluster.  
  5. It should take about 15-20 minutes, depending on the number of worker nodes
 
 ![Create GPU Cluster Policy](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut01.gif)
 
 
- 6. Once all the Pods are up and running navigate to the **nvidia-driver-deamonset-. . . . .** (This pod is available for each worker node)
- 7. Go to the terminal for the pod and run the **nvidia-smi** command to display the details about the GPUs available on that node as shown in the screenshot. The NVIDIA System Management Interface (nvidia-smi) is a command-line utility that monitors and manages NVIDIA GPU devices.
+ 6. Once all the Pods are up and running, navigate to the **nvidia-driver-deamonset-. . . . .** (This pod is available for each worker node)
+ 7. Go to the terminal for the pod and run the **nvidia-smi** command to display the details about the GPUs available on that node, as shown in the screenshot. The NVIDIA System Management Interface (nvidia-smi) is a command-line utility that monitors and manages NVIDIA GPU devices.
 
 ![NVIDIA SMI](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/NvidiaOperatorConfigOut02.gif)
 
 #### Red Hat OpenShift AI Operator
 Red Hat OpenShift AI is a scalable MLOps platform that supports the full AI/ML lifecycle, enabling teams to build, deploy, and manage AI applications both on-premises and in the cloud. Previously known as OpenShift Data Science, it leverages open-source technologies for innovation and consistency. Installation is now possible.
 
-Follow the below steps to install the Nvidia GPU operator
+Follow the steps below to install the Nvidia GPU operator
 
- 1. Login to **Red Hat OpenShift web console**
+ 1. Log in to the **Red Hat OpenShift web console**
  2. Navigate to **Operators --> Operator Hub**
  3. Select the project where you want to install the Red Hat OpenShift AI Operator
- 4. In the search box type **Red Hat OpenShift AI** 
- 5. Select the one provided by **Red Hat** as shown in the screenshots below 
+ 4. In the search box, type **Red Hat OpenShift AI** 
+ 5. Select the one provided by **Red Hat**, as shown in the screenshots below 
  6. Click **Install** to bring up the Install Operator Screen 
- 7. Leave all the values at default and Click **Install**
+ 7. Leave all the values at default and click **Install**
 
 ![Install RHOAI Operator](https://raw.githubusercontent.com/rohitralhan/InstallRHOAI/refs/heads/main/images/RHOAIOperatorOut01.gif)
 
@@ -122,7 +122,7 @@ Next, we will configure the Red Hat OpenShift AI Operator using the following st
 
  1. Navigate to **Operators --> Installed Operators**
  2. Click **Red Hat OpenShift AI Operator**
- 3. On the Details Page that Opens up, in the **Data Science Cluster** card click on **Create Instance** 
+ 3. On the Details Page that opens up, in the **Data Science Cluster** card, click on **Create Instance** 
  4. Use the default values and click **Create**
  5. Navigate to the **Data Science Cluster** tab to monitor the progress of the cluster under the Status column
  6. You can also see the status of other components under the DSC Initialization and the Feature Tracker tabs
@@ -132,7 +132,7 @@ Next, we will configure the Red Hat OpenShift AI Operator using the following st
 
 Once the Data Science Cluster is successfully installed:
 
- 1. A new menu item **Red Hat OpenShift AI** is available under the squares Icon on the top right, as shown in the screenshot below.
+ 1. A new menu item, **Red Hat OpenShift AI**, is available under the squares Icon on the top right, as shown in the screenshot below.
  2. Click it to navigate to the login screen for Red Hat OpenShift AI
  3. Click Login with OpenShift to log in
  4. After logging in, you will land on the Red Hat OpenShift AI home screen
